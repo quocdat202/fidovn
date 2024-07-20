@@ -5,7 +5,8 @@ interface AntButtonProps {
     text?: string;
     icon?: React.ReactNode;
     size?: "small" | "middle" | "large";
-    style?: any
+    style?: any;
+    iconPosition?: "start" | "end";
 }
 
 const AntButton: React.FC<AntButtonProps> = (props) => {
@@ -15,6 +16,7 @@ const AntButton: React.FC<AntButtonProps> = (props) => {
             icon={props.icon}
             size={props.size}
             style={props.style}
+            iconPosition={props.iconPosition}
         >
             {props.text}
         </Button>

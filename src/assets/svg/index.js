@@ -25,3 +25,21 @@ export const BuildingsIcon = () => {
         </svg>
     )
 }
+export const SearchIcon = () => {
+    return (
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.5 21.5C16.7467 21.5 21 17.2467 21 12C21 6.75329 16.7467 2.5 11.5 2.5C6.25329 2.5 2 6.75329 2 12C2 17.2467 6.25329 21.5 11.5 21.5Z" stroke="#0C0507" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M22 22.5L20 20.5" stroke="#0C0507" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+    )
+}
+
+export const ArrowDownIcon = () => {
+    return (
+        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.9262 5.96667L9.57954 10.3133C9.06621 10.8267 8.22621 10.8267 7.71288 10.3133L3.36621 5.96667" stroke="#1B1B1B" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+    )
+}

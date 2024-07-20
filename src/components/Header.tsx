@@ -4,7 +4,7 @@ import logo_fidovn from 'assets/images/logo_fidovn.png'
 import vi_language from 'assets/images/vi_language.png'
 import styles from '@/styles/Header.module.scss'
 import AntButton from './AntButton';
-import { BuildingsIcon, ProfileIocn, RegisterIcon } from 'assets/svg';
+import { ArrowDownIcon, BuildingsIcon, ProfileIocn, RegisterIcon } from 'assets/svg';
 export const HeaderApp = () => {
     const { Header } = Layout;
     const items = [
@@ -18,7 +18,10 @@ export const HeaderApp = () => {
         {
             key: '2',
             icon: null,
-            label: 'Việc làm',
+            label: <div>
+                <span style={{ marginRight: 10 }}>Việc làm</span>
+                <ArrowDownIcon />
+            </div>,
             path: '/',
             children: [
                 { key: '7', label: 'Option 7' },
@@ -28,30 +31,44 @@ export const HeaderApp = () => {
         {
             key: '3',
             icon: null,
-            label: 'Bất động sản',
+            label: <div>
+                <span style={{ marginRight: 10 }}>Bất động sản</span>
+                <ArrowDownIcon />
+            </div>,
             path: '/real-estate',
         },
         {
             key: '4',
             icon: null,
-            label: 'Công ty',
+            label: <div>
+                <span style={{ marginRight: 10 }}>Công ty</span>
+                <ArrowDownIcon />
+            </div>,
             path: '/company',
         },
         {
             key: '5',
             icon: null,
-            label: 'Công cụ',
+            label: <div>
+                <span style={{ marginRight: 10 }}>Công cụ</span>
+                <ArrowDownIcon />
+            </div>,
             path: '/tools',
         },
         {
             key: '6',
             icon: null,
-            label: 'Blog Fidovn',
+            label: <div>
+                <span style={{ marginRight: 10 }}>Blog Fidovn</span>
+                <ArrowDownIcon />
+            </div>,
             path: '/blogs',
         },
     ]
-    const styleButton = {
-        borderColor: '#FA9806', color: '#FA9806', borderRadius: 16,
+    const styleSheets = {
+        button: {
+            borderColor: '#FA9806', color: '#FA9806', borderRadius: 16,
+        }
     }
 
 
@@ -92,19 +109,19 @@ export const HeaderApp = () => {
                         size='large'
                         text="Đăng ký"
                         icon={<RegisterIcon />}
-                        style={{ borderColor: '#FA9806', color: '#FA9806', borderRadius: 16, }}
+                        style={styleSheets.button}
                     />
                     <AntButton
                         size='large'
                         text="Đăng nhập"
                         icon={<ProfileIocn />}
-                        style={{ backgroundColor: '#FA9806', borderColor: '#FA9806', color: 'white', borderRadius: 16, }}
+                        style={{ ...styleSheets.button, backgroundColor: '#FA9806', color: 'white' }}
                     />
                     <AntButton
                         size='large'
                         text="Đăng tuyển & Mua bán"
                         icon={<BuildingsIcon />}
-                        style={{ backgroundColor: '#1B1B1B', borderColor: '#1B1B1B', color: 'white', borderRadius: 16, }}
+                        style={{ ...styleSheets.button, backgroundColor: '#1B1B1B', color: 'white', borderColor: '#1B1B1B' }}
                     />
                     <AntButton
                         size='large'
