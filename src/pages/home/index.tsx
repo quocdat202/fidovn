@@ -1,17 +1,15 @@
 import React from 'react'
 import { Layout } from 'antd';
+import styles from 'styles/Home.module.scss'
 
 export const Home = () => {
 
     const { Content } = Layout;
     return (
-        <Content style={{ padding: '0 48px' }}>
+        <Content style={{ padding: '0' }}>
 
-            <div style={{
-                padding: 24,
-                minHeight: 380,
-            }}>
-                Content
+            <div className={styles.slideContentContainer} >
+
             </div>
         </Content>
     )

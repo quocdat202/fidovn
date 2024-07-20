@@ -50,6 +50,10 @@ export const HeaderApp = () => {
             path: '/blogs',
         },
     ]
+    const styleButton = {
+        borderColor: '#FA9806', color: '#FA9806', borderRadius: 16,
+    }
+
 
     return (
         <Header
@@ -62,7 +66,7 @@ export const HeaderApp = () => {
                 padding: 0,
             }}
         >
-            <Row >
+            <Row style={{ padding: '0 20px' }} >
                 <Col span={12}>
                     <Menu
                         mode="horizontal"
@@ -104,8 +108,7 @@ export const HeaderApp = () => {
                     />
                     <AntButton
                         size='large'
-                        icon={<img src={vi_language} />}
-                        style={{ backgroundColor: '#1B1B1B', borderColor: '#1B1B1B', color: 'white', borderRadius: 16, }}
+                        icon={<img style={{ borderRadius: 16, }} src={vi_language} />}
                     />
                 </Col>
             </Row>
